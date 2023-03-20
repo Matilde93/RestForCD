@@ -14,8 +14,8 @@ namespace RestForCD.Repositories.Tests
     public class TeachersRepositoryTests
     {
 
-        TeachersRepository repository;
-        Teacher testTeacher;
+        TeachersRepository? repository;
+        Teacher? testTeacher;
 
         [TestInitialize]
         public void TestInitialize()
@@ -28,14 +28,14 @@ namespace RestForCD.Repositories.Tests
         [TestMethod()]
         public void TeachersRepositoryTest()
         {
-            List<Teacher> teachers = repository.GetAll();
+            List<Teacher>? teachers = repository.GetAll();
             Assert.AreEqual(5, teachers.Count());
         }
 
         [TestMethod()]
         public void GetAllTest()
         {
-            List<Teacher> teachers = repository.GetAll();
+            List<Teacher>? teachers = repository.GetAll();
             Assert.IsInstanceOfType(teachers, typeof(List<Teacher>));
         }
 
